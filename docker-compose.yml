@@ -19,4 +19,4 @@ services:
       MYSQL_DATABASE: base_de_dados
       MYSQL_USER: root
       MYSQL_PASSWORD: senha
-      TZ: America/Sao_Paulo
+      TZ: TZ
