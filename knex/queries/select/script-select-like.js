@@ -1,4 +1,4 @@
-const knex = require('../config/database');
+const knex = require('../../config/database');
 const selectLike = knex('users')
     .select('id', 'first_name')
     .where('first_name', 'like', '___')

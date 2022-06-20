@@ -1,4 +1,4 @@
-const knex = require('../config/database');
+const knex = require('../../config/database');
 const selectIn = knex('users')
     .select('id', 'first_name')
     .whereIn('id', [10, 15, 20, 25]);

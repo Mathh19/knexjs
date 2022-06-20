@@ -1,4 +1,4 @@
-const knex = require('../config/database');
+const knex = require('../../config/database');
 
 const select = knex('users as u').select('u.email as uemail', 'u.id as uid');
 
