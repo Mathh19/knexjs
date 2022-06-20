@@ -1,15 +1,18 @@
 const knex = require('../../config/database');
 
-const select =  knex('users').select('id', 'first_name');
-const deleteSql = knex('users').delete().whereBetween('id', [30, 35]);
+const select = knex('users').where('id', '=', 29);
+const update = knex('users').update({
+    first_name: 'Carlos',
+    last_name: 'Mend'
+}).where('id', '=', 29);
 
 console.log(select.toString());
-console.log(deleteSql.toString());
+console.log(update.toString());
 
-deleteSql.then((data) =>{
+update.then((data) => {
     console.log(data);
 
-    select.then((data) =>{
+    select.then((data) => {
         console.log(data);
     }).catch((e) => {
         console.log(e.message);
